@@ -1350,7 +1350,7 @@ function Get-CustomerHosts(){
 
         write-host Saving files in: $mydocuments -ForegroundColor Yellow
 
-        New-SCOMManagementGroupConnection -ComputerName ccwp0opsv00001
+        New-SCOMManagementGroupConnection -ComputerName contoso.cloudosServer.test
 
         $test = Get-SCOMMonitoringObject -class  (Get-SCOMClass -name "Microsoft.windows.computer")
 
@@ -1382,7 +1382,7 @@ function Get-CustomerHosts(){
 
         write-host Saving files in: $mydocuments\$prefix -ForegroundColor Yellow
 
-        New-SCOMManagementGroupConnection -ComputerName ccwp0opsv00001
+        New-SCOMManagementGroupConnection -ComputerName contoso.cloudosServer.test
 
         $test = Get-SCOMMonitoringObject -class  (Get-SCOMClass -name "Microsoft.windows.computer") |  Select-String -Pattern "^$prefix-.*"
 
